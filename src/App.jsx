@@ -3,25 +3,22 @@ import { useState } from "react";
 const App = () => {
   // Write the code of your component here
 
-  const [showArticle, setShowArticle] = useState(false);
+  const [articleDisplayed, setArticleDisplayed] = useState(false);
 
   function handleArticle() {
-    setShowArticle(!showArticle);
+    setArticleDisplayed(!articleDisplayed);
   }
   return (
     <>
       <h1>Mini Blog</h1>
-      {showArticle ? (
-        <button onClick={() => handleArticle()} className="btn btn--danger">
-          Hide article
-        </button>
-      ) : (
-        <button onClick={() => handleArticle()} className="btn btn--primary">
-          Show article
-        </button>
-      )}
+      <button
+        onClick={() => handleArticle()}
+        className={articleDisplayed ? "btn--danger btn" : "btn btn--primary"}
+      >
+        {articleDisplayed ? "Hide" : "Show"} article
+      </button>
 
-      {showArticle && (
+      {articleDisplayed && (
         <div className="container">
           <h2>Title</h2>
           <p>
