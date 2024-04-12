@@ -5,15 +5,15 @@ const App = () => {
 
   const [articleDisplayed, setArticleDisplayed] = useState(false);
 
-  function handleArticle() {
+  function handleToggleArticle() {
     setArticleDisplayed(!articleDisplayed);
   }
   return (
     <>
       <h1>Mini Blog</h1>
       <button
-        onClick={() => handleArticle()}
-        className={articleDisplayed ? "btn--danger btn" : "btn btn--primary"}
+        onClick={() => handleToggleArticle()}
+        className={`btn ${articleDisplayed ? "btn--danger" : "btn--primary"}`}
       >
         {articleDisplayed ? "Hide" : "Show"} article
       </button>
