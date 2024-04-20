@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Article = ({ title, children }) => {
   // Write the code of your component here
   return (
@@ -9,3 +11,8 @@ const Article = ({ title, children }) => {
 };
 
 export default Article;
+
+Article.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
