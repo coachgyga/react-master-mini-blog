@@ -60,7 +60,7 @@ const App = () => {
     <>
       <h1>Mini Blog</h1>
       <p style={{ fontWeight: "bold", fontSize: 20 }}>
-        You spent {useTimer(10)} on the blog.
+        You spent {useTimer(1000)} on the blog.
       </p>
       <Button
         variant={areArticlesDisplayed ? "danger" : "primary"}
